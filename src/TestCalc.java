@@ -20,8 +20,10 @@ public class TestCalc  {
         Assert.assertEquals(2.5,calc.getDivision(2,5),"delenie 5/2 neverno");
     }
 
-    @Test(expectedExceptions = ArithmeticException.class)
-    public void divisionWithException() {
+    //@Test(description = "First test of page constructor",enabled =true )
+    @Test(expectedExceptions = ArithmeticException.class,enabled =true)
+
+       public void divisionWithException() {
         calc.getDivision(5,0);
     }
     @Test(description = "First test of page constructor",enabled =true )
