@@ -16,15 +16,17 @@ public class TestCalc  {
 
     @Test(description = "First test of page constructor",enabled =true )
     public void testCalcDivision(){
-
-        Assert.assertEquals(2.5,calc.getDivision(2,5),"delenie 5/2 neverno");
+        System.out.println(calc.getDivision(2d,5d));
+        Assert.assertEquals(2.5,calc.getDivision(2d,5d),"delenie 5/2 neverno");
     }
 
     //@Test(description = "First test of page constructor",enabled =true )
     @Test(expectedExceptions = ArithmeticException.class,enabled =true)
-
+    //@Test(description = "First test of page constructor",enabled =true )
        public void divisionWithException() {
-        calc.getDivision(5,0);
+      //calc.getDivision(0,5);
+       System.out.println(calc.getDivision(0,5));
+        Assert.assertEquals(calc.getDivision(0,5),null);
     }
     @Test(description = "First test of page constructor",enabled =true )
     public void testCalcMultt(){

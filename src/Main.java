@@ -19,5 +19,9 @@ public class  Main {
                 {
         return (double) b /a;
                  }
+    public int getDivision(int a, int b)
+    {
+        return  b /a;
+    }
 
 }
