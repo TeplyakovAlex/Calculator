@@ -1,27 +1,27 @@
 /**
  * Created by diz on 27.05.2016.
  */
-public class  Main {
+public class Main {
 
-    public int getSumm ( int a, int b)    {
+    public double getSumm(double a, double b) {
         return a + b;
     }
 
-    public int getSub(int a, int b) {
+    public double getSub(double a, double b) {
         return a - b;
     }
 
-    public int getMult(int a, int b) {
+    public double getMult(double a, double b) {
         return a * b;
     }
 
-    public  double getDivision(double a, double b)
-                {
-        return (double) b /a;
-                 }
-    public int getDivision(int a, int b)
-    {
-        return  b /a;
+    public double getDivision(double a, double b) {
+        if (a == 0) throw new ArithmeticException();
+        return (double) b / a;
+    }
+
+    public int getDivision(int a, int b) {
+        return b / a;
     }
 
 }
