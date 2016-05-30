@@ -17,8 +17,9 @@ public class TestCalc  {
     @Test(description = "First test of page constructor",enabled =true )
     public void testCalcDivision(){
 
-        Assert.assertEquals(2.5,calc.getDivision(5,2),"delenie 5/2 neverno");
+        Assert.assertEquals(2.5,calc.getDivision(2,5),"delenie 5/2 neverno");
     }
+
     @Test(expectedExceptions = ArithmeticException.class)
     public void divisionWithException() {
         calc.getDivision(5,0);
@@ -26,7 +27,7 @@ public class TestCalc  {
     @Test(description = "First test of page constructor",enabled =true )
     public void testCalcMultt(){
         int res= calc.getMult(5,5);
-        Assert.assertEquals(25, res, "умножение проводится не правильно");
+        Assert.assertEquals(25, res, "umnogenie 5*5 ne verno");
     }
     @Test(description = "First test of page constructor",enabled =true )
     public void testCalcSubt() {

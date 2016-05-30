@@ -1,7 +1,7 @@
 /**
  * Created by diz on 27.05.2016.
  */
-public class Main {
+public class  Main {
 
     public int getSumm ( int a, int b)    {
         return a + b;
@@ -15,10 +15,9 @@ public class Main {
         return a * b;
     }
 
-
-    public double getDivision(double a, double b)
+    public  double getDivision(double a, double b)
                 {
-        return (double) ((double) b / (double) a);
+        return (double) b /a;
                  }
 
 }
