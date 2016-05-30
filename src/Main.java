@@ -17,10 +17,8 @@ public class Main {
 
 
     public double getDivision(double a, double b)
-             throws
-            IllegalArgumentException
-    {
-        return (double) (a/b);
-    }
+                {
+        return (double) ((double) b / (double) a);
+                 }
 
 }

@@ -17,7 +17,7 @@ public class TestCalc  {
     @Test(description = "First test of page constructor",enabled =true )
     public void testCalcDivision(){
 
-        Assert.assertEquals(2.5,calc.getDivision(5,2),"деление проводится не правильно");
+        Assert.assertEquals(2.5,calc.getDivision(5,2),"delenie 5/2 neverno");
     }
     @Test(expectedExceptions = ArithmeticException.class)
     public void divisionWithException() {
@@ -36,7 +36,7 @@ public class TestCalc  {
     }
 
     @Test(description = "First test of page constructor",enabled =true )
-    public void testCalcSummt() {
+    public void testCalcSumm() {
 
         int res= calc.getSumm(5,5);
         Assert.assertEquals(10,res,"сложение проводится не правильно");
