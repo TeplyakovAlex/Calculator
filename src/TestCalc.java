@@ -127,11 +127,198 @@ public class TestCalc {
         double res = calc.getMult(1.7e+308, 1);
         Assert.assertEquals(1.7e+308, res, 0.3, "umnogenie 1.7e+308*1 ne verno");
     }
+
     @Test(description = "20test", enabled = true)
     public void testCalcMultt20() {
         double res = calc.getMult(1.7e+308, 2);
-        //Assert.assertEquals(1.7e+308, res, 0.3, "umnogenie 1.7e+308*2 ne verno");
     }
 
+    @Test(description = "21t", enabled = true)
+    public void testCalcSumm21() {
 
+        double res = calc.getSumm(5, 0);
+        Assert.assertEquals(5, res, 0.3, "5+0 ne verno");
+
+    }
+
+    @Test(description = "22t", enabled = true)
+    public void testCalcSumm22() {
+
+        double res = calc.getSumm(0, 5);
+        Assert.assertEquals(5, res, 0.3, "0+5 ne verno");
+
+    }
+
+    @Test(description = "23t", enabled = true)
+    public void testCalcSumm23() {
+
+        double res = calc.getSumm(1.7e+308, 5);
+
+    }
+    @Test(description = "24t", enabled = true)
+    public void testCalcSumm24() {
+
+        double res = calc.getSumm(-6, 5);
+        Assert.assertEquals(-1, res, 0.3, "-6+5 ne verno");
+
+    }
+    @Test(description = "25t", enabled = true)
+    public void testCalcSub25() {
+
+        double res = calc.getSub(5, 6);
+        Assert.assertEquals(-1, res, 0.3, "5-6 ne verno");
+    }
+    @Test(description = "26t", enabled = true)
+    public void testCalcSub26() {
+
+        double res = calc.getSub(-5, 6);
+        Assert.assertEquals(-11, res, 0.3, "-5-6 ne verno");
+    }
+    @Test(description = "27t", enabled = true)
+    public void testCalcSub27() {
+
+        double res = calc.getSub(-5, -6);
+        Assert.assertEquals(1, res, 0.3, "-5-(-6) ne verno");
+    }
+    @Test(description = "28t", enabled = true)
+    public void testCalcSub28() {
+
+        double res = calc.getSub(-4.9e-324, 6);
+        //"(-4.9e-324)-6"
+    }
+    @Test(description = "29t", enabled = true)
+    public void testCalcSub29() {
+
+        double res = calc.getSub(1,0.1);
+        Assert.assertEquals(0.9, res, 0.001, "1-0.1 ne verno");
+    }
+    @Test(description = "30t", enabled = true)
+    public void testCalcSub30() {
+
+        double res = calc.getSub(0.1, 1);
+        Assert.assertEquals(-0.9, res, 0.3, "0.1-1) ne verno");
+    }
+
+    @Test(description = "31t", enabled = true)
+    public void testCalcSub31() {
+
+        double res = calc.getSub(5, 0);
+        Assert.assertEquals(5, res, 0.3, "5-0 ne verno");
+    }
+
+    @Test(description = "32t", enabled = true)
+    public void testCalcSub32() {
+
+        double res = calc.getSub(0, 5);
+        Assert.assertEquals(-5, res, 0.3, "0-5 ne verno");
+    }
+
+    @Test(description = "33t", enabled = true)
+    public void testCalcSub33() {
+
+        double res = calc.getSub(0, 0);
+        Assert.assertEquals(0, res, 0.3, "0-0 ne verno");
+    }
+    @Test(description = "34t", enabled = true)
+    public void testCalcSub34() {
+
+        double res = calc.getSub(6, 5);
+        Assert.assertEquals(1, res, 0.3, "6-5 ne verno");
+    }
+    @Test(description = "35t", enabled = true)
+    public void testCalcSub35() {
+
+        double res = calc.getSub(1,-(1.7e+308));
+        //1-(-1.7e+308)
+    }
+    @Test(description = "36t", enabled = true)
+    public void testCalcSumm36() {
+
+        double res = calc.getSumm(0,0);
+        Assert.assertEquals(0, res, 0.3, "0+0 ne verno");
+
+    }
+
+    @Test(description = "37t", enabled = true)
+    public void testCalcSumm37() {
+
+        double res = calc.getSumm(0,0.2);
+        Assert.assertEquals(0.2, res, 0.003, "0.2+0 ne verno");
+
+    }
+
+    @Test(description = "38t", enabled = true)
+    public void testCalcSumm38() {
+
+        double res = calc.getSumm(-5,-5);
+        Assert.assertEquals(-10, res, 0.003, "-5+(-5) ne verno");
+
+    }
+    @Test(description = "39t", enabled = true)
+    public void testCalcSumm39() {
+
+        double res = calc.getSumm(0,-1);
+        Assert.assertEquals(-1, res, 0.003, "0+(-1) ne verno");
+
+    }
+
+    @Test(description = "40t", enabled = true)
+    public void testCalcSumm40() {
+
+        double res = calc.getSumm(0.5,0.5);
+        Assert.assertEquals(1, res, 0.003, "0.5+0.5 ne verno");
+
+    }
+    @Test(description = "41t", enabled = true)
+    public void testCalcSumm41() {
+
+        double res = calc.getSumm(-4.9e-324,-0.5);
+        //-4.9e-324-0.5
+
+    }
+    @Test(description = "delenie double 0 na 0", expectedExceptions = ArithmeticException.class, enabled = true)
+    public void divisionWithException42() {
+
+        calc.getDivision(0, 0);
+    }
+    @Test(description = "43test", enabled = true)
+    public void testCalcDivision43() {
+        double res = calc.getDivision(0.5,1);
+        Assert.assertEquals(2,res , 0.5, "delenie 1/0.5 neverno");
+    }
+    @Test(description = "44test", enabled = true)
+    public void testCalcDivision44() {
+        double res = calc.getDivision(0.5,1.7e+308);
+        //"delenie max/0.5 neverno"
+    }
+    @Test(description = "45test", enabled = true)
+    public void testCalcDivision45() {
+        double res = calc.getDivision(-4.9e-324,1);
+        //"delenie 1/min neverno"
+    }
+    @Test(description = "46test", enabled = true)
+    public void testCalcDivision46() {
+        double res = calc.getDivision(0.5,0.5);
+        Assert.assertEquals(1,res , 0.001, "delenie 0.5/0.5 neverno");
+    }
+    @Test(description = "47test", enabled = true)
+    public void testCalcDivision47() {
+        double res = calc.getDivision(5,5);
+        Assert.assertEquals(1,res , 0.001, "delenie 5/5 neverno");
+    }
+    @Test(description = "48test", enabled = true)
+    public void testCalcMultt48() {
+        double res = calc.getMult(-5, -5);
+        Assert.assertEquals(25, res, 0.3, "umnogenie -5*(-5_ ne verno");
+    }
+    @Test(description = "49test", enabled = true)
+    public void testCalcMultt49() {
+        double res = calc.getMult(-0.5, -0.5);
+        Assert.assertEquals(0.25, res, 0.3, "umnogenie -0.5*(-0.5) ne verno");
+    }
+    @Test(description = "50test", enabled = true)
+    public void testCalcMultt50() {
+        double res = calc.getMult(1.7e+308, 1.7e+308);
+       //max*max
+    }
 }
